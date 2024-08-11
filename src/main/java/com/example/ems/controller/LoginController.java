@@ -22,6 +22,11 @@ public class LoginController {
         return "login";
     }
 
+    @GetMapping("/logout")
+    public String logout() {
+        return "redirect:/login";
+    }
+
     @GetMapping("/register")
     public String registerForm(Model model) {
        model.addAttribute("user", new UserDto());

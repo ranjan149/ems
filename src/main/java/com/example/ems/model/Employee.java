@@ -90,8 +90,8 @@ public class Employee {
         return startDate;
     }
 
-    public void setStartedDate(String startedDate) {
-        this.startDate = startedDate;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
 
     public EmployeeAddress getEmployeeAddress() {

@@ -33,12 +33,15 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests((authorizeHttpRequests) ->
                         authorizeHttpRequests
-                                //.requestMatchers("/login/**").permitAll()
                                 .requestMatchers("/register/**").permitAll()
-                                .requestMatchers("/employee-list").permitAll()
-                                .requestMatchers("/employee-form").permitAll()
-                                .requestMatchers("/**").hasRole("USER")
-                                .requestMatchers("/ admin/**").hasRole("ADMIN")
+//                                .requestMatchers("/employee-list").permitAll()
+//                                .requestMatchers("/employee-form").permitAll()
+//                                .requestMatchers("/employee/save").permitAll()
+//                                .requestMatchers("/employee-form/**").permitAll()
+//                                .requestMatchers("/employee-delete/**").permitAll()
+                                .requestMatchers("/login/**").permitAll()
+                                .requestMatchers("/logout/**").permitAll()
+                                .anyRequest().authenticated()
                 )
                 .formLogin((formLogin) ->
                         formLogin
